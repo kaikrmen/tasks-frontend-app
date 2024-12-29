@@ -2,6 +2,10 @@
 
 Este es el frontend de la aplicación de gestión de tareas. Permite a los usuarios iniciar sesión, registrar una cuenta, agregar, editar, eliminar y filtrar tareas.
 
+<img src="./public/image.png">
+<img src="./public/image2.png">
+<img src="./public/image3.png">
+<img src="./public/image4.png">
 
 
 ## Tecnologías Utilizadas

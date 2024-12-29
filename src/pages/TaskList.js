@@ -26,7 +26,6 @@ import {
   useColorMode,
   Textarea,
   Badge,
-  Divider,
 } from '@chakra-ui/react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
