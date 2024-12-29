@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Task Manager Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es el frontend de la aplicación de gestión de tareas. Permite a los usuarios iniciar sesión, registrar una cuenta, agregar, editar, eliminar y filtrar tareas.
 
-## Available Scripts
 
-In the project directory, you can run:
+
+## Tecnologías Utilizadas
+
+- **React**: Librería de JavaScript para construir interfaces de usuario.
+- **Chakra UI**: Librería de componentes de React para un diseño estilizado y accesible.
+- **Axios**: Cliente HTTP basado en promesas para realizar peticiones a la API.
+- **React Router**: Librería para manejo de rutas en aplicaciones React.
+- **React Toastify**: Librería para mostrar notificaciones.
+- **Framer Motion**: Librería para animaciones en React.
+- **JWT Decode**: Librería para decodificar JSON Web Tokens.
+
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/kaikrmen/tasks-frontend-app.git
+   cd tasks-frontend-app
+   ```
+
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Crea un archivo `.env` en la raíz del proyecto con la siguiente variable de entorno:
+   ```env
+   REACT_APP_API_URL=http://localhost:5000/api
+   ```
+
+4. Inicia la aplicación:
+   ```bash
+   npm start
+   ```
+
+## Scripts Disponibles
+
+En el directorio del proyecto, puedes ejecutar:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Inicia la aplicación en modo de desarrollo.
+Abre [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Inicia el corredor de pruebas en modo interactivo.
+Consulta la sección sobre [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para más información.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye la aplicación para producción en la carpeta `build`.
+Agrupa adecuadamente React en modo de producción y optimiza la construcción para el mejor rendimiento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Componentes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `AuthContext.js`
 
-### `npm run eject`
+Gestiona la autenticación del usuario, proporcionando funciones para iniciar sesión, registrarse y cerrar sesión.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `PrivateRoute.js`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Protege las rutas que requieren autenticación, redirigiendo a los usuarios no autenticados a la página de inicio de sesión.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Home.js`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Página de inicio que incluye el formulario de inicio de sesión y un botón para llevar a la página de registro.
 
-## Learn More
+### `Register.js`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Página de registro para crear una nueva cuenta de usuario.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `TaskList.js`
 
-### Code Splitting
+Página principal de la aplicación donde los usuarios pueden ver, agregar, editar, eliminar y filtrar tareas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Pruebas
 
-### Analyzing the Bundle Size
+Las pruebas se realizan utilizando `Jest` y `React Testing Library`. Puedes encontrar ejemplos de pruebas en el archivo `TaskList.test.js` en la carpeta `src/pages`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```plaintext
+src/pages/TaskList.test.js
+```
 
-### Making a Progressive Web App
+## Contribuir
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+¡Las contribuciones son bienvenidas! Si tienes alguna mejora o encuentras algún error, por favor abre un issue o envía un pull request.
 
-### Advanced Configuration
+## Licencia
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
